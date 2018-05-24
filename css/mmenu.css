@@ -1,0 +1,259 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    transition: all .3s linear;
+}
+
+
+/*Menu*/
+.background-fade{
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: black;
+    opacity: 0.7;
+}
+
+.background-fade.active{
+  display: block;
+}
+
+nav#nav{
+  z-index:101;
+  display: block;
+  position: fixed;
+  padding: 0px 0px 0px 0px;
+  top: 0;
+  left: -261px;
+  height: 100%;
+  border-right: 1px solid #fff;
+  transition: left 1.5s;
+  animation-duration: 2s;
+  transform: translate(0px, 0px);
+  transition-duration: 1s, 1s;
+      -webkit-transform: translate(0px, 0px);
+      -webkit-transition-duration: 1s, 1s;
+      -moz-transform: translate(0px, 0px);
+      -moz-transition-duration: 1s, 1s;
+      -o-transition: translate(0px, 0px);
+      -o-transition-duration: 1s, 1s;
+      -ms-transform: translate(0px, 0px);
+      -ms-transition-duration: 1s, 1s;
+}
+
+nav#nav.active{
+  z-index: 100;
+  left: 0px;
+  transition: left 1s;
+  animation-duration: 2s;
+  transition-duration: 1.5s, 1.5s;
+  transform: translate(0px, 0px);
+      -webkit-transform: translate(0px, 0px);
+      -webkit-transition-duration: 1.5s, 1.5s;
+      -moz-transform: translate(0px, 0px);
+      -moz-transition-duration: 1.5s, 1.5s;
+      -o-transform: translate(0px, 0px);
+      -o-transition-duration: 1.5s, 1.5s;
+      -ms-transform: translate(0px, 0px);
+      -ms-transition-duration: 1.5s, 1.5s;
+}
+
+nav#nav ul{
+  background: rgba(188, 0, 0, 0.8);
+  list-style-position: inside;
+  list-style-type: none;
+  width: 260px;
+  height: 100%;
+  margin: 0px auto 0px auto;
+  padding: 10px 0px 10px 0px;
+}
+
+nav#nav li{
+  margin: 0px auto 10px auto;
+  padding: 5px 30px 5px 30px;
+  cursor: pointer;
+}
+
+nav#nav li a {
+    color: #FFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav#nav li:hover{
+    background: #FFF;
+    color: ;
+}
+
+nav#nav li:hover a{
+    color: #000;
+}
+
+nav#nav.active span.menu{
+    background: ;
+}
+
+nav#nav.active span.menu:before{
+    background: #fff;
+    box-shadow: 0 .45em 0 0 #fff, 0 .9em 0 0 #fff;
+}
+
+span.menu {
+    display: block;
+    vertical-align: middle;
+    position: relative;
+    text-indent: -9999px;
+    overflow: hidden;
+    cursor: pointer;
+    position: absolute;
+    right: -50px;
+    top: 30px;
+    border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -ms-border-radius: 5px;
+}
+
+
+/*Menu*/
+
+/*Section*/
+section#section {
+    background: #fff;
+}
+
+section#section header{
+    background: #808080;
+    overflow: hidden;
+}
+
+section#section header h1{
+    text-align: center;
+    font-size: 1.5em;
+    color: #FFF;
+}
+/*Section*/
+
+/*Article*/
+article{
+    margin: 10px auto;
+    padding: 0px 10px;
+}
+/*Article*/
+
+.cmn-toggle-switch {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+          transition: background 0.3s;
+}
+
+.cmn-toggle-switch:focus {
+  outline: none;
+}
+
+.cmn-toggle-switch span {
+display: block;
+    position: absolute;
+    top: 18px;
+    left: 5px;
+    right: 5px;
+    height: 4px;
+    background: #fff;
+}
+
+.cmn-toggle-switch span::before,
+.cmn-toggle-switch span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  content: "";
+}
+
+.cmn-toggle-switch span::before {
+  top: -9px;
+}
+
+.cmn-toggle-switch span::after {
+  bottom: -9px;
+}
+
+/**
+ * Style krest
+ * 
+ * Hamburger to "x" (htx). Takes on a hamburger shape, bars slide
+ * down to center and transform into an "x".
+ */
+.cmn-toggle-switch__htx {
+  background-color: rgba(188, 0, 0, 0.8);
+}
+
+.cmn-toggle-switch__htx span {
+  -webkit-transition: background 0 0.3s;
+          transition: background 0 0.3s;
+}
+
+.cmn-toggle-switch__htx span::before,
+.cmn-toggle-switch__htx span::after {
+  -webkit-transition-duration: 0.3s, 0.3s;
+          transition-duration: 0.3s, 0.3s;
+  -webkit-transition-delay: 0.3s, 0;
+          transition-delay: 0.3s, 0;
+}
+
+.cmn-toggle-switch__htx span::before {
+  -webkit-transition-property: top, -webkit-transform;
+          transition-property: top, transform;
+}
+
+.cmn-toggle-switch__htx span::after {
+  -webkit-transition-property: bottom, -webkit-transform;
+          transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+.cmn-toggle-switch__htx.active {
+  background-color: rgba(188, 0, 0, 0.8);
+}
+
+.cmn-toggle-switch__htx.active span {
+  background: none;
+}
+
+.cmn-toggle-switch__htx.active span::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.cmn-toggle-switch__htx.active span::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.cmn-toggle-switch__htx.active span::before,
+.cmn-toggle-switch__htx.active span::after {
+  -webkit-transition-delay: 0, 0.3s;
+          transition-delay: 0, 0.3s;
+}
